@@ -61,3 +61,24 @@ line-height: var(--leading-normal);
 -webkit-font-smoothing: antialiased;
 }
 
+/* ── Gallery Introduction ── */
+.gallery-intro {
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.gallery-intro h2 {
+    color: var(--information-header-text-color);
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-bold);
+    Line-height: var(--leading-tight);
+    margin-bottom: 1rem;
+}
+
+.gallery-intro p {
+    color: var(--quote-text-color);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    max-width: 700px;
+    margin: 0 auto;
+}
