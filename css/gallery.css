@@ -10,6 +10,7 @@
     --quote-section-background: #E5E7EB;
     --quote-text-color: #1F2937;
     --button-background-color: #3882F6;
+    --accent-color: #FBBF24;
     
      /* ── Type Scale (sizes) ── */
     --text-base:  1.125rem;  /* 18px — secondary, links */
@@ -59,6 +60,13 @@ body {
 font-family: var(--font-sans);
 line-height: var(--leading-normal);
 -webkit-font-smoothing: antialiased;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 /* ── Gallery Introduction ── */
