@@ -32,7 +32,6 @@
 
        /* ── Fonts ── */
     --font-sans: 'Roboto', system-ui, sans-serif;
-    
 }
 
 html {
@@ -67,6 +66,195 @@ flex-direction: column;
 
 main {
     flex: 1;
+}
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4rem;
+    padding: 0.1rem 0.1rem;
+    background-color: var(--dark-background-color);
+}
+
+.logo {
+    color: var(--header-logo-text-color);
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+}
+
+.span-logo {
+    font-weight: var(--font-weight-light);
+    color: var(--header-logo-text-color);
+}
+
+.nav-check {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/*--Hamaburger (The Label)--*/
+.nav-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin: 5px 0;
+    background: var(--header-link-text-color);
+    transition: transform 0.25s, opacity 0.25s;
+}
+
+.nav-check:focus-visible + .nav-toggle {
+    outline: 2px solid var(--button-background-color);
+    outline-offset: 4px;
+}
+
+.nav-check:checked + .nav-toggle .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.nav-check:checked + .nav-toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-check:checked + .nav-toggle .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+.main-nav {
+    display: none;
+    width: 100%;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+}
+
+.nav-check:checked ~ .main-nav {
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-link {
+    display: block;
+    padding: 0.75rem 0rem;
+    color: var(--header-link-text-color);
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: var(--accent-color);
+}
+
+.nav-link[aria-current="page"] {
+    color: var(--header-logo-text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.5rem;
+}
+
+/*--Desktop (768px and up)--*/
+@media (min-width: 768px) {
+    .nav-toggle, .nav-check {
+        display: none;
+    }
+    .main-nav {
+        display: block;
+        width: auto;
+        max-height: none;
+        overflow: visible;
+    }
+    .nav-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+    .nav-link {
+        padding: 0rem;
+    }
+}
+
+/*--Footer--*/
+.site-footer {
+    background-color: var(--dark-background-color);
+    color: var(--header-link-text-color);
+    padding: 2rem 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-brand {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--header-logo-text-color);
+    text-decoration: none;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-contact {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-link {
+    color: var(--header-link-text-color);
+    text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+    color: var(--accent-color);
+} 
+
+.footer-legal {
+    text-align: center;
+    border-top: 1px solid var(--header-link-text-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .site-footer {
+        padding: 2rem;
+    }
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer-links {
+        flex-direction: row;
+        gap: 1.25rem;
+    }
+    .footer-content nav {
+        margin-top: 0.5rem;
+    }
 }
 
 /* ── Gallery Introduction ── */
@@ -139,7 +327,7 @@ main {
     font-weight: var(--font-weight-medium);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--button-background-color);
+    color: var(--accent-color);
     margin-top: auto;
 }
 
