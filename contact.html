@@ -13,10 +13,72 @@
     <title>Contact Page</title>
 </head>
 <body>
-    <h1>Contact Page</h1>
+    <nav class="nav-bar">
+        <h1>BronckoBuilders</h1>
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <!-- Header -->
 
-    <!-- Main Content -->
+    <div class="header">
+        <h1>Get In Touch</h1>
+        <div class="contact-info">
+            <p class="email">Email: info@example.com | </p>
+            <p class="phone">  Phone: (123) 456-7890</p>
+           
+        </div>
+        <p>We are all ears for our next design challange. Contact us via email or phone. our fill out the form bellow and we will get back to you shortly.</p>
+
+    <div class="container">
+        <form action="" method="post">
+
+          <fieldset class="emergency">
+             <legend>Emergency:</legend>
+
+             <label>
+             <input type="radio" name="emergency" value="urgent" required>
+             Urgent
+            </label>
+
+            <label>
+            <input type="radio" name="emergency" value="not-urgent">
+            Not urgent
+            </label>
+        </fieldset>
+
+        <fieldset class="name-fields">
+            <fieldset>
+                <legend>First Name:</legend>
+                <input type="text" name="first-name" required>
+            </fieldset>
+            <fieldset>
+                <legend>Last Name:</legend>
+                <input type="text" name="last-name" required>
+            </fieldset>
+        </fieldset>
+
+        <fieldset class="email-field">
+            <legend>Email:</legend>
+            <input type="email" name="email" required>
+
+        <fieldset class="message-field">
+            <legend>Message:</legend>
+            <textarea name="message" rows="5" required></textarea>
+        </fieldset>
+
+        <fieldset class="submit-field">
+            <legend>Submit:</legend>
+            <button type="submit">Submit</button>   
+        </fieldset>
+        
+        </form>
+        <div class="location">
+
+        </div>
+    </div>
 
     <!-- Footer -->
 </body>
