@@ -33,6 +33,9 @@
 
        /* ── Fonts ── */
     --font-sans: 'Roboto', system-ui, sans-serif;
+
+       /* ── Page Gutter ── */
+       --page-gutter: max(2rem, calc((100% - 72rem) / 2));
     
 }
 
@@ -203,7 +206,7 @@ main {
 .site-footer {
     background: var(--dark-background-color);
     color: var(--header-link-text-color);
-    padding: 2rem 1rem;
+    padding: 2rem var(--page-gutter);
 }
 
 .footer-content {
@@ -213,14 +216,10 @@ main {
 }
 
 .footer-brand {
-    color: var(--button-background-color);
-    font-weight: var(--font-weight-extrabold);
-    font-size: var(--text-lg);
-    color: var(--button-background-color);
+    color: var(--header-logo-text-color);
     font-weight: var(--font-weight-extrabold);
     font-size: var(--text-lg);
     text-decoration: none;
-
 }
 
 .footer-links {
@@ -255,11 +254,20 @@ main {
 }
 
 @media (min-width: 768px) {
-    .site-footer { padding: 2rem; }
+    .site-footer { padding: 2rem var(--page-gutter); }
 
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        gap: 1.25rem;
+    }
+
+    .footer-content nav {
+        margin-top: 0.5rem;
     }
 }
 .intro-section {
