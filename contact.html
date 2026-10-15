@@ -13,73 +13,183 @@
     <title>Contact Page</title>
 </head>
 <body>
-    <nav class="nav-bar">
-        <h1>BronckoBuilders</h1>
-        <ul class="nav-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./gallery.html">Gallery</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-    </nav>
+
     <!-- Header -->
+   <header class="nav-bar">
+        <a href="index.html" class="logo">Broncko<span class="span-logo">Builds</span></a>
 
-    <div class="header">
-        <h1>Get In Touch</h1>
-        <div class="contact-info">
-            <p class="email">Email: info@example.com | </p>
-            <p class="phone">  Phone: (123) 456-7890</p>
-           
+        <input type="checkbox" id="nav-toggle" class="nav-check" aria-label="Toggle Menu">
+          <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+          </label>
+        <nav class="main-nav" aria-label="Main">
+          <ul class="nav-links">
+             <li><a href="index.html" class="nav-link" >Home</a></li>
+             <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+             <li><a href="contact.html" class="nav-link" aria-current="page">Contact</a></li>
+          </ul>
+    </nav>
+    </header>
+
+
+    <main>
+        <section class="intro-section">
+            <div class="intro-content">
+                <h1>Get In Touch</h1>
+                <p class="intro-description">Connect with our architectural and construction team to plan your build, schedule a site evaluation, or submit an urgent project dispatch.</p>
+                <div class="direct-contact-bar">
+                    <a href="tel:+11234567890" class="contact-action-link">
+                        <span class="action-tag">Phone</span> (123) 456-7890
+                    </a>
+                    <span class="contact-divider" aria-hidden="true">|</span>
+                    <a href="mailto:info@bronckobuilds.com" class="contact-action-link">
+                        <span class="action-tag">Email</span> info@bronckobuilds.com
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <form action="#" method="post" class="contact-form">
+                <fieldset class="emergency">
+                    <legend>Inquiry Type</legend>
+                    <div class="radio-options">
+                        <label class="radio-label">
+                            <input type="radio" name="emergency" value="standard" checked required>
+                            <span>Standard Project Ticket</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="emergency" value="urgent" required>
+                            <span>24/7 Emergency Request</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="name-split">
+                    <div class="input-field">
+                        <label for="first-name">First Name <span class="required">*</span></label>
+                        <input type="text" id="first-name" name="first-name" placeholder="John" autocomplete="given-name" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="last-name">Last Name <span class="required">*</span></label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Doe" autocomplete="family-name" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-field">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" autocomplete="email" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" autocomplete="tel" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-field">
+                        <label for="type">Trade Category / Project Type <span class="required">*</span></label>
+                        <select id="type" name="type" required>
+                            <option value="">Select a category</option>
+                            <option value="Modern Custom Homes">Modern Custom Homes</option>
+                            <option value="Estate Renovation">Estate Renovation</option>
+                            <option value="commercial">Commercial Construction</option>
+                            <option value="structural-engineering">Structural Engineering</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="timeline">Target Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select a timeline</option>
+                            <option value="immediate">Immediate / Emergency</option>
+                            <option value="1-3-months">1 – 3 Months</option>
+                            <option value="3-6-months">3 – 6 Months</option>
+                            <option value="6-plus-months">6+ Months</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label for="message">Project Scope & Details <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" placeholder="Provide details regarding site conditions, budget parameters, or specifications..." required></textarea>
+                </div>
+
+                <div class="input-field">
+                    <label for="file">Attach Blueprints / Documents <span class="optional">(Optional)</span></label>
+                    <input id="file" type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.dwg">
+                    <span class="file-hint">Accepted formats: PDF, PNG, JPG, DWG (Max 25MB)</span>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Inquiry</button>
+            </form>
+
+            <aside class="location" aria-labelledby="location-title">
+                <div class="location-header">
+                    <h2 id="location-title">Our Location</h2>
+                    <p class="location-subtitle">Headquarters & Architectural Studio</p>
+                </div>
+
+                <div class="location-info-list">
+                    <div class="location-info-item">
+                        <span class="info-label">Office Address</span>
+                        <address class="info-value">
+                            123 Main Street<br>
+                            Napa, CA 94559
+                        </address>
+                    </div>
+
+                    <div class="location-info-item">
+                        <span class="info-label">Operating Hours</span>
+                        <p class="info-value">
+                            Monday – Friday: 8:00 AM – 5:00 PM<br>
+                            Emergency Dispatch: 24/7 On-Call
+                        </p>
+                    </div>
+
+                    <div class="location-info-item">
+                        <span class="info-label">Verified Credentials</span>
+                        <p class="info-value">
+                            CA Gen Contractor #GC-884210<br>
+                            Fully Bonded & Insured | OSHA-30 Certified
+                        </p>
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://maps.google.com/maps?q=1990+Iroquois+St+Napa+CA&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                        title="Map showing BronckoBuilds location"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </aside>
         </div>
-        <p>We are all ears for our next design challange. Contact us via email or phone. our fill out the form bellow and we will get back to you shortly.</p>
+    </main>
 
-    <div class="container">
-        <form action="" method="post">
+         <footer class="site-footer">
+        <div class="footer-content">
+            <a href="index.html" class="footer-brand">Broncko<span class="span-logo">Builds</span></a>
 
-          <fieldset class="emergency">
-             <legend>Emergency:</legend>
+            <nav aria-label="Footer">
+                <ul class="footer-links">
+                <li><a href="index.html" class="footer-link">Home</a></li>
+                <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                <li><a href="contact.html" class="footer-link">Contact</a></li> 
+                </ul>
+            </nav>
 
-             <label>
-             <input type="radio" name="emergency" value="urgent" required>
-             Urgent
-            </label>
-
-            <label>
-            <input type="radio" name="emergency" value="not-urgent">
-            Not urgent
-            </label>
-        </fieldset>
-
-        <fieldset class="name-fields">
-            <fieldset>
-                <legend>First Name:</legend>
-                <input type="text" name="first-name" required>
-            </fieldset>
-            <fieldset>
-                <legend>Last Name:</legend>
-                <input type="text" name="last-name" required>
-            </fieldset>
-        </fieldset>
-
-        <fieldset class="email-field">
-            <legend>Email:</legend>
-            <input type="email" name="email" required>
-
-        <fieldset class="message-field">
-            <legend>Message:</legend>
-            <textarea name="message" rows="5" required></textarea>
-        </fieldset>
-
-        <fieldset class="submit-field">
-            <legend>Submit:</legend>
-            <button type="submit">Submit</button>   
-        </fieldset>
-        
-        </form>
-        <div class="location">
-
+            <address class="footer-contact">
+            <a href="mailto:hello@example.com" class="footer-link">hello@example.com</a>
+            <a href="tel:+27000000000" class="footer-link">000 000 0000</a>
+        </address>
         </div>
-    </div>
+     
+     <p class="footer-legal"><small>&copy; 2026 BronckoBuilds. All rights reserved.</small></p>
+     </footer>
 
-    <!-- Footer -->
 </body>
 </html>
