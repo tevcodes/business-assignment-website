@@ -321,6 +321,113 @@ main {
     }
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.review {
+    padding: 4rem var(--page-gutter);
+    background: var(--quote-section-background);
+}
+
+.review-figure {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;          
+    border-top: 4px solid var(--accent-color);
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.review-quote {
+    position: relative;
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--quote-text-color);
+}
+
+.review-quote::before {
+    content: "\201C";
+    display: block;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--accent-color);
+}
+
+.review-quote::after {
+    content: "\201D";        
+    display: block;
+    height: 2rem;            
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--accent-color);
+}
+
+.review-author {
+    margin-top: 1.5rem;
+    font-size: var(--text-base);
+    color: var(--dark-background-color);
+}
+
+@media (min-width: 768px) {
+    .review {
+        padding: 6rem var(--page-gutter);
+
+        .review-quote {
+            font-size: var(--text-2xl);
+        }
+    }
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem var(--page-gutter);
+    text-align: center;
+}
+
+.cta-title {
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+    color: var(--dark-background-color);
+}
+
+.cta-text {
+    max-width: 40rem;
+    font-size: var(--text-base);
+    color: var(--dark-background-color);
+}
+
+.cta-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--button-background-color);
+    color: var(--header-logo-text-color);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    border-radius: 0.25rem;
+
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+    background: var(--accent-color);
+    color: var(--dark-background-color);
+}
+
+@media (min-width: 768px) {
+    .cta {
+        padding: 5rem var(--page-gutter);
+    }
+}
+
+
 /* ---------- Footer ---------- */
 .site-footer {
     background: var(--dark-background-color);
