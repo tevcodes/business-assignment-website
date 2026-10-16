@@ -1,0 +1,7 @@
+The user shall be able to submit an inquiry categorized as either an emergency request or a standard ticket.
+The user shall be able to view all official company contact information, office operating hours, and emergency response availability. (Merged direct details and operating hours)
+The user shall be able to initiate a direct phone call or draft an email with a single tap via interactive links.
+The user shall be able to fill out an estimate inquiry form to request a project price quote by specifying the trade category, project scope, budget range, and timeline. (Merged category selection and quote form details)
+The user shall be able to attach architectural blueprints, site photos, or project documents directly to their form submission.
+The user shall receive instant visual validation feedback when entering form data if mandatory fields, valid phone numbers, or email formats are incorrect or missing.
+The user shall be able to review verified company credentials, including state contractor license numbers, insurance status, and safety certifications.
