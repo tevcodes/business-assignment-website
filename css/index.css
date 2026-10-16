@@ -84,7 +84,6 @@ main {
     min-height: 4rem;
     padding: 0 var(--page-gutter);
     background: var(--dark-background-color);
-    ;
 }
 
 .logo {
