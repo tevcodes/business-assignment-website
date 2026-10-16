@@ -89,6 +89,7 @@ main {
     font-size: 24px;
     font-weight: var(--font-weight-bold);
     text-decoration: none;
+    letter-spacing: -0.06em;
 }
 
 .span-logo {
@@ -269,9 +270,10 @@ main {
 .gallery-intro h1 {
     color: var(--information-header-text-color);
     font-size: var(--text-3xl);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-extrabold);
     line-height: var(--leading-tight);
     margin-bottom: 1rem;
+    letter-spacing: -0.025em;
 }
 
 .gallery-intro p {
