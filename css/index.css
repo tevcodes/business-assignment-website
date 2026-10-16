@@ -371,7 +371,7 @@ main {
 .review-author {
     margin-top: 1.5rem;
     font-size: var(--text-base);
-    color: var(--hero-secondary-text-color);
+    color: var(--dark-background-color);
 }
 
 @media (min-width: 768px) {
