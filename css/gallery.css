@@ -103,11 +103,12 @@ main {
     height: 1px;
 }
 
-/*--Hamaburger (The Label)--*/
+/*--Hamburger (The Label)--*/
 .nav-toggle {
     display: block;
     cursor: pointer;
     padding: 0.5rem;
+    position: relative;
 }
 
 .bar {
@@ -125,7 +126,7 @@ main {
 }
 
 .nav-check:checked + .nav-toggle .bar:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
+    transform: translateY(8px) rotate(45deg);
 }
 
 .nav-check:checked + .nav-toggle .bar:nth-child(2) {
@@ -133,7 +134,7 @@ main {
 }
 
 .nav-check:checked + .nav-toggle .bar:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .main-nav {
