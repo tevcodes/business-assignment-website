@@ -103,11 +103,12 @@ main {
     height: 1px;
 }
 
-/*--Hamaburger (The Label)--*/
+/*--Hamburger (The Label)--*/
 .nav-toggle {
     display: block;
     cursor: pointer;
     padding: 0.5rem;
+    position: relative;
 }
 
 .bar {
