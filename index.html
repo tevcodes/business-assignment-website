@@ -1,115 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    
-    <!-- Preconnect: warms up DNS + TCP + TLS to Google's font servers -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
 
-<!-- The font itself — only the weights you actually use -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap" rel="stylesheet">   
+    <!-- Preconnect: warms up DNS + TCP + TLS to Google's font servers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- The font itself — only the weights you actually use -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Business Landing Page</title>
-</head>
-<body>
- 
+  </head>
+  <body>
     <!-- Header -->
     <header class="nav-bar">
-        <a href="index.html" class="logo">Broncko<span class="span-logo">Builds</span></a>
+      <a href="index.html" class="logo"
+        >Broncko<span class="span-logo">Builds</span></a
+      >
 
-        <input type="checkbox" id="nav-toggle" class="nav-check" aria-label="Toggle Menu">
-          <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
-             <span class="bar"></span>
-             <span class="bar"></span>
-             <span class="bar"></span>
-          </label>
-        <nav class="main-nav" aria-label="Main">
-          <ul class="nav-links">
-             <li><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
-             <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-             <li><a href="contact.html" class="nav-link">Contact</a></li>
-          </ul>
-    </nav>
+      <input
+        type="checkbox"
+        id="nav-toggle"
+        class="nav-check"
+        aria-label="Toggle Menu"
+      />
+      <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+      <nav class="main-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-link" aria-current="page">Home</a>
+          </li>
+          <li><a href="gallery.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Main Content -->
-     <main>
-     <section class="hero" aria-labelledby="hero-title">
-       <div class="hero-text">
-        <h1 id="hero-title" class="hero-title">Built right. Built to last.</h1>
-        <p class="hero-subtitle">From new homes to commercial spaces and renovations, we deliver quality workmanship on time and on budget.</p>
-        <a href="contact.html" class="hero-button">Get in touch</a>
-       </div>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-text">
+          <h1 id="hero-title" class="hero-title">
+            Built right. Built to last.
+          </h1>
+          <p class="hero-subtitle">
+            From new homes to commercial spaces and renovations, we deliver
+            quality workmanship on time and on budget.
+          </p>
+          <a href="contact.html" class="hero-button">Get in touch</a>
+        </div>
 
-       <img src="./assets/images/hero-image.png" alt="hero image" class="hero-image">
-     </section>
+        <img
+          src="./assets/images/hero-image.png"
+          alt="Construction cranes on an active building site"
+          class="hero-image"
+        />
+      </section>
 
-     <section class="services" aria-labelledby="services-title">
+      <section class="services" aria-labelledby="services-title">
         <h2 id="services-title" class="section-title">What we build</h2>
 
         <ul class="service-list">
-            <li class="service-card">
-                <h3 class="service-title">Residential</h3>
-                <p class="service-text">New homes, extensions and outbuildings designed around how you live, 
-                    built with quality materials and finished to a high standard.</p>
-            </li>
+          <li class="service-card">
+            <img
+              src="./assets/images/residential-card-image.jpg"
+              alt="Residential Image Example"
+              class="service-image"
+              width="400"
+              height="250"
+              loading="lazy"
+            />
+            <h3 class="service-title">Residential</h3>
+            <p class="service-text">
+              New homes, extensions and outbuildings designed around how you
+              live, built with quality materials and finished to a high
+              standard.
+            </p>
+          </li>
 
-            <li class="service-card">
-                <h3 class="service-title">Commercial</h3>
-                <p class="service-text">Offices, retail spaces and warehouses delivered to schedule, 
-                    with minimal disruption to your business and clear communication throughout.</p>
-            </li>
+          <li class="service-card">
+            <img
+              src="./assets/images/commercial-card-image.jpg"
+              alt="Commercial Image Example"
+              class="service-image"
+              width="400"
+              height="250"
+              loading="lazy"
+            />
+            <h3 class="service-title">Commercial</h3>
+            <p class="service-text">
+              Offices, retail spaces and warehouses delivered to schedule, with
+              minimal disruption to your business and clear communication
+              throughout.
+            </p>
+          </li>
 
-            <li class="service-card">
-                <h3 class="service-title">Renovations</h3>
-                <p class="service-text">Give an existing space new life, from kitchen and bathroom upgrades to full-building refurbishments, 
-                    planned and managed from start to finish.</p>
-            </li>
+          <li class="service-card">
+            <img
+              src="./assets/images/renovation-card-image.jpg"
+              alt="Renovations Image Example"
+              class="service-image"
+              width="400"
+              height="250"
+              loading="lazy"
+            />
+            <h3 class="service-title">Renovations</h3>
+            <p class="service-text">
+              Give an existing space new life, from kitchen and bathroom
+              upgrades to full-building refurbishments, planned and managed from
+              start to finish.
+            </p>
+          </li>
         </ul>
-     </section>
+      </section>
 
-     <section class="review" aria-labelledby="review-title">
-         <h2 id="review-title" class="visually-hidden">Client review</h2>
+      <section class="review" aria-labelledby="review-title">
+        <h2 id="review-title" class="visually-hidden">Client review</h2>
 
-         <figure class="review-figure">
-            <blockquote class="review-quote">
-                <p>BronckoBuilds finished our extension two weeks ahead of schedule and kept us updated every step of the way. 
-                    The quality of the work speaks for itself.</p>
-            </blockquote>
-            <figcaption class="review-author">Thandi M., Homeowner</figcaption>
-         </figure>
-     </section>
+        <figure class="review-figure">
+          <blockquote class="review-quote">
+            <p>
+              BronckoBuilds finished our extension two weeks ahead of schedule
+              and kept us updated every step of the way. The quality of the work
+              speaks for itself.
+            </p>
+          </blockquote>
+          <figcaption class="review-author">Thandi M., Homeowner</figcaption>
+        </figure>
+      </section>
 
-     <section class="cta" aria-labelledby="cta-title">
+      <section class="cta" aria-labelledby="cta-title">
         <h2 id="cta-title" class="cta-title">Ready to start your project?</h2>
-        <p class="cta-text">Tell us what you have in mind and 
-            we'll get back to you with a free, no-obligation quote.</p>
-          <a href="contact.html" class="cta-button">Get a quote</a>
-     </section>
-     </main>
+        <p class="cta-text">
+          Tell us what you have in mind and we'll get back to you with a free,
+          no-obligation quote.
+        </p>
+        <a href="contact.html" class="cta-button">Get a quote</a>
+      </section>
+    </main>
 
     <!-- Footer -->
-     <footer class="site-footer">
-        <div class="footer-content">
-            <a href="index.html" class="footer-brand">Broncko<span class="span-logo">Builds</span></a>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <a href="index.html" class="footer-brand"
+          >Broncko<span class="span-logo">Builds</span></a
+        >
 
-            <nav aria-label="Footer">
-                <ul class="footer-links">
-                <li><a href="index.html" class="footer-link">Home</a></li>
-                <li><a href="gallery.html" class="footer-link">Gallery</a></li>
-                <li><a href="contact.html" class="footer-link">Contact</a></li> 
-                </ul>
-            </nav>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </nav>
 
-            <address class="footer-contact">
-            <a href="mailto:hello@example.com" class="footer-link">info@bronckobuilds.com</a>
-            <a href="tel:+27000000000" class="footer-link">000 000 0000</a>
+        <address class="footer-contact">
+          <a href="mailto:hello@example.com" class="footer-link"
+            >info@bronckobuilds.com</a
+          >
+          <a href="tel:+27000000000" class="footer-link">000 000 0000</a>
         </address>
-        </div>
-     
-     <p class="footer-legal"><small>&copy; 2026 BronckoBuilds. All rights reserved.</small></p>
-     </footer>
-</body>
+      </div>
+
+      <p class="footer-legal">
+        <small>&copy; 2026 BronckoBuilds. All rights reserved.</small>
+      </p>
+    </footer>
+  </body>
 </html>
