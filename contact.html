@@ -27,7 +27,7 @@
         <nav class="main-nav" aria-label="Main">
           <ul class="nav-links">
              <li><a href="index.html" class="nav-link" >Home</a></li>
-             <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+             <li><a href="gallery.html" class="nav-link">Projects</a></li>
              <li><a href="contact.html" class="nav-link" aria-current="page">Contact</a></li>
           </ul>
     </nav>
@@ -39,7 +39,7 @@
             <div class="intro-content">
                 <h1>Get In Touch</h1>
                 <p class="intro-description">Connect with our architectural and construction team to plan your build, schedule a site evaluation, or submit an urgent project dispatch.</p>
-                <div class="direct-contact-bar">
+                <address class="direct-contact-bar">
                     <a href="tel:+11234567890" class="contact-action-link">
                         <span class="action-tag">Phone</span> (123) 456-7890
                     </a>
@@ -47,7 +47,7 @@
                     <a href="mailto:info@bronckobuilds.com" class="contact-action-link">
                         <span class="action-tag">Email</span> info@bronckobuilds.com
                     </a>
-                </div>
+                </address>
             </div>
         </section>
 
@@ -55,19 +55,24 @@
             <form action="#" method="post" class="contact-form">
                 <fieldset class="emergency">
                     <legend>Inquiry Type</legend>
-                    <div class="radio-options">
-                        <label class="radio-label">
-                            <input type="radio" name="emergency" value="standard" checked required>
-                            <span>Standard Project Ticket</span>
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="emergency" value="urgent" required>
-                            <span>24/7 Emergency Request</span>
-                        </label>
-                    </div>
+                    <ul class="radio-options">
+                        <li class="radio-item">
+                            <label class="radio-label">
+                                <input type="radio" name="emergency" value="standard" checked required>
+                                <span>Standard Project Ticket</span>
+                            </label>
+                        </li>
+                        <li class="radio-item">
+                            <label class="radio-label">
+                                <input type="radio" name="emergency" value="urgent" required>
+                                <span>24/7 Emergency Request</span>
+                            </label>
+                        </li>
+                    </ul>
                 </fieldset>
 
-                <div class="name-split">
+                <fieldset class="name-split">
+                    <legend class="sr-only">Client Name</legend>
                     <div class="input-field">
                         <label for="first-name">First Name <span class="required">*</span></label>
                         <input type="text" id="first-name" name="first-name" placeholder="John" autocomplete="given-name" required>
@@ -76,9 +81,10 @@
                         <label for="last-name">Last Name <span class="required">*</span></label>
                         <input type="text" id="last-name" name="last-name" placeholder="Doe" autocomplete="family-name" required>
                     </div>
-                </div>
+                </fieldset>
 
-                <div class="form-row">
+                <fieldset class="form-row">
+                    <legend class="sr-only">Direct Contact Details</legend>
                     <div class="input-field">
                         <label for="email">Email <span class="required">*</span></label>
                         <input type="email" id="email" name="email" placeholder="john.doe@example.com" autocomplete="email" required>
@@ -87,9 +93,10 @@
                         <label for="phone">Phone Number <span class="required">*</span></label>
                         <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" autocomplete="tel" required>
                     </div>
-                </div>
+                </fieldset>
 
-                <div class="form-row">
+                <fieldset class="form-row">
+                    <legend class="sr-only">Project Category and Timeline</legend>
                     <div class="input-field">
                         <label for="type">Trade Category / Project Type <span class="required">*</span></label>
                         <select id="type" name="type" required>
@@ -110,7 +117,7 @@
                             <option value="6-plus-months">6+ Months</option>
                         </select>
                     </div>
-                </div>
+                </fieldset>
 
                 <div class="input-field">
                     <label for="message">Project Scope & Details <span class="required">*</span></label>
@@ -127,45 +134,48 @@
             </form>
 
             <aside class="location" aria-labelledby="location-title">
-                <div class="location-header">
+                <header class="location-header">
                     <h2 id="location-title">Our Location</h2>
                     <p class="location-subtitle">Headquarters & Architectural Studio</p>
-                </div>
+                </header>
 
-                <div class="location-info-list">
+                <dl class="location-info-list">
                     <div class="location-info-item">
-                        <span class="info-label">Office Address</span>
-                        <address class="info-value">
-                            123 Main Street<br>
-                            Napa, CA 94559
-                        </address>
+                        <dt class="info-label">Office Address</dt>
+                        <dd class="info-value">
+                            <address>
+                                123 Main Street<br>
+                                Napa, CA 94559
+                            </address>
+                        </dd>
                     </div>
 
                     <div class="location-info-item">
-                        <span class="info-label">Operating Hours</span>
-                        <p class="info-value">
+                        <dt class="info-label">Operating Hours</dt>
+                        <dd class="info-value">
                             Monday – Friday: 8:00 AM – 5:00 PM<br>
                             Emergency Dispatch: 24/7 On-Call
-                        </p>
+                        </dd>
                     </div>
 
                     <div class="location-info-item">
-                        <span class="info-label">Verified Credentials</span>
-                        <p class="info-value">
+                        <dt class="info-label">Verified Credentials</dt>
+                        <dd class="info-value">
                             CA Gen Contractor #GC-884210<br>
                             Fully Bonded & Insured | OSHA-30 Certified
-                        </p>
+                        </dd>
                     </div>
-                </div>
+                </dl>
 
-                <div class="map-wrapper">
+                <figure class="map-wrapper">
                     <iframe
                         src="https://maps.google.com/maps?q=1990+Iroquois+St+Napa+CA&t=&z=14&ie=UTF8&iwloc=&output=embed"
                         title="Map showing BronckoBuilds location"
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                </div>
+                    <figcaption class="sr-only">Interactive map showing BronckoBuilds headquarters in Napa, California</figcaption>
+                </figure>
             </aside>
         </div>
     </main>
@@ -177,7 +187,7 @@
             <nav aria-label="Footer">
                 <ul class="footer-links">
                 <li><a href="index.html" class="footer-link">Home</a></li>
-                <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                <li><a href="gallery.html" class="footer-link">Projects</a></li>
                 <li><a href="contact.html" class="footer-link">Contact</a></li> 
                 </ul>
             </nav>
