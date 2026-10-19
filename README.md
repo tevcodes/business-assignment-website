@@ -1,7 +1,7 @@
 # business-assignment-website
 
-INSTRUCTIONS
+Business Website for a assignment 1
 
-- Download ZIP file or clone repository
-- Create new branch e.g: John/LandingPage
-- And Happy Coding :)
+Technologies: HTML and CSS
+
+View website here: https://tevcodes.github.io/business-assignment-website/
